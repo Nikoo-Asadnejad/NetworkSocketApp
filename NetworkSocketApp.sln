@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketClient", "SocketClient\SocketClient.csproj", "{7C3ECDE8-A8EE-42EC-A414-60FB8BC729C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketServer", "SocketServer\SocketServer.csproj", "{F33C782B-48BD-4B9D-B700-1261A2E68148}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C3ECDE8-A8EE-42EC-A414-60FB8BC729C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3ECDE8-A8EE-42EC-A414-60FB8BC729C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3ECDE8-A8EE-42EC-A414-60FB8BC729C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3ECDE8-A8EE-42EC-A414-60FB8BC729C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33C782B-48BD-4B9D-B700-1261A2E68148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33C782B-48BD-4B9D-B700-1261A2E68148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33C782B-48BD-4B9D-B700-1261A2E68148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33C782B-48BD-4B9D-B700-1261A2E68148}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
