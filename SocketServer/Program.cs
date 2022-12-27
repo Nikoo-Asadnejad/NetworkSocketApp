@@ -34,6 +34,7 @@ while (true)
         Console.WriteLine(
             $"Socket server sent acknowledgment: \"{ackMessage}\"");
 
+        if(Console.ReadKey().Key == ConsoleKey.F1)
         break;
     }
     // Sample output:
