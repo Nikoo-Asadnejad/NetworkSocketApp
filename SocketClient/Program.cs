@@ -11,6 +11,7 @@ IPEndPoint ipEndPoint = new(ipAddress, 11_000);
 
 Console.WriteLine($"Server ip is {ipEndPoint}");
 Console.ResetColor();
+Console.WriteLine();
 
 using Socket client = new(
     ipEndPoint.AddressFamily,
@@ -36,12 +37,16 @@ while (true)
         Console.WriteLine($"Socket client sent message: \"{message.Replace("<|EOM|>","")}\"");
 
         // Receive ack.
-        var ackBuffer = new byte[1_024];
-        var received = await client.ReceiveAsync(ackBuffer, SocketFlags.None);
-        var response = Encoding.UTF8.GetString(ackBuffer, 0, received);
-        
-        if(response.Contains("<|ACK|>"))
+        byte[] ackBuffer = new byte[1_024];
+        int receivedAck = await client.ReceiveAsync(ackBuffer, SocketFlags.None);
+        string aknowledge = Encoding.UTF8.GetString(ackBuffer, 0, receivedAck);
+
+        if (aknowledge.Contains("<|ACK|>"))
+        {
+            Console.WriteLine($"Client has received acknowledgment {aknowledge}");
             break;
+        }
+           
     
         // Sample output:
         //     Socket client sent message: "Hi friends 👋!<|EOM|>"
